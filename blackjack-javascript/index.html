@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BlackJack Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div>
+    <div>
+      <h1>BlackJack Game</h1>
+      <!-- Creating a game start -->
+      <div id="message">Press Start Button</div>  
+      <div id="start">
+        <button id="btnstart" type="button" onclick="Start()" class="btn">Start Game</button>
+      </div>
+      <div class="total">Total $<span id="dollars">100</span><br>Bet Amount $<input type="number" id="mybet" value="5"
+          min="1" max="100">
+          <button id="maxbet" type="button" onclick="maxbet()" class="btn">Max Bet</button>
+      </div>
+      <div id="output">
+        <!-- i.e where all the dealers's and player's card will go -->
+        Dealer Hand : <span id="dValue"></span>
+        <div id="dealerHolder"></div>
+        Player Hand : <span id="pValue"></span>
+        <div id="playerHolder"></div>
+
+        <!-- Adding buttons with click event,all referring to same function with different argument respectively -->
+        <div id="myactions">
+          <button id="btnhold" type="button" onclick="cardAction('hold')" class="btn">Hold</button>
+          <button id="btnhit" type="button" onclick="cardAction('hit')" class="btn">Hit</button>
+          <button id="btndouble" type="button" onclick="cardAction('double')" class="btn">Double</button>
+        </div>
+        <div>
+           <!-- No need to shuffle always on dealing  -->
+          <button id="btndeal" type="button" onclick="dealNew()" class="btn">Deal</button>
+        </div>
+      </div>
+      <div>
+      </div>
+      <script src="script.js"></script>
+</body>
+
+</html>
